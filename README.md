@@ -1,5 +1,5 @@
 
-### teamus-wildhack :nail_care:
+### team-Mocho-wildhack :nail_care:
 Wildhack 2025 repo at Northwestern Technological Institute
 
 # MyMoneyMyChoice :dollar:
