@@ -5,7 +5,8 @@ Wildhack 2025 repo at Northwestern Technological Institute
 # MyMoneyMyChoice :dollar:
 
 A website that offers financial help and advice to college students and financial illeterates alike. This website offers
-information on rewards and what you can do with credit cards.
+information on rewards, credit scores, and credit cards. It also recommends you where to start in you credit **adventure**
+based on the form matching you fill out.
 
 
 ##  Installation & Run :runner:
