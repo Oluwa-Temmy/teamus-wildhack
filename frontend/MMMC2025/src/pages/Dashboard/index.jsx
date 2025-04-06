@@ -34,15 +34,15 @@ export function Dashboard(){
             <MdDashboard />
             Dashboard
           </NavItem>
-          <NavItem>
+          <NavItem onClick={() => navigate('/cards')}>
             <FaRegCreditCard />
             Cards
           </NavItem>
-          <NavItem>
+          <NavItem onClick={() => navigate('/scores')}>
             <MdSportsScore />
             Scores
           </NavItem>
-          <NavItem>
+          <NavItem onClick={() => navigate('/miles')}>
             <FaPlane />
             Miles
           </NavItem>
