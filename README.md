@@ -5,3 +5,5 @@ Wildhack 2025 repo
 
 A website that offers financial help and advice.
 
+# Third Party Apps
+Auth0 - Used for authentication 
