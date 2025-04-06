@@ -60,3 +60,7 @@ export const Placeholder = styled.div`
   font-size: 1.2rem;
   color: #94a3b8;
 `
+export const InputGroup = styled.div`
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+`
