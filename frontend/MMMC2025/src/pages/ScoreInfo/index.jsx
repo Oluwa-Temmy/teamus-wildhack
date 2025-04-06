@@ -1,8 +1,10 @@
-import { PageContainer, Header, Title, Subtitle, ContentSection, IconTitle, Paragraph, List, Quote } from './styles'
+import { PageContainer, Container, Header, Title, Subtitle, ContentSection, IconTitle, Paragraph, List, Quote } from './styles'
 import { MdVerified, MdHelpOutline, MdOutlineTipsAndUpdates } from 'react-icons/md'
-
+import Navbar from '../../components/Navbar'
 export function Score() {
   return (
+    <Container>
+    <Navbar />
     <PageContainer>
       <Header>
         <Title>Understand Your Credit Score</Title>
@@ -47,5 +49,6 @@ export function Score() {
         💡 The #1 rule: <strong>Pay your credit card bills on time</strong>. It's the simplest way to protect and improve your score.
       </Quote>
     </PageContainer>
+    </Container>
   )
 }

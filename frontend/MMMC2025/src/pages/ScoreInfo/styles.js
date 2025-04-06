@@ -1,11 +1,26 @@
 import styled from 'styled-components'
 
+export const Container = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100vh; 
+  overflow: hidden;
+`
+
 export const PageContainer = styled.div`
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  color: #f1f5f9;
-  font-family: 'Inter', sans-serif;
+  margin-left: 200px; 
+  padding: 40px;
+  height: 100vh;
+  overflow-y: auto;
+  width: calc(100% - 200px); 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  p {
+    font-size: 21px;
+  }
 `
 
 export const Header = styled.header`

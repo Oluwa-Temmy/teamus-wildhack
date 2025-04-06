@@ -16,13 +16,6 @@ export function LandingPage() {
         <Logo src={logoWhite} alt="logo" />
         
         <NavRight>
-          <NavList>
-            <NavItem><NavLink href="/">Home</NavLink></NavItem>
-            <NavItem><NavLink href="/about">About us</NavLink></NavItem>
-            <NavItem><NavLink href="/contact">Products</NavLink></NavItem>
-            <NavItem><NavLink href="/contact">Contact</NavLink></NavItem>
-          </NavList>
-
           <Button onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>Sign up</Button>
           <Button onClick={() => loginWithRedirect()}>Login</Button>
         </NavRight>

@@ -1,8 +1,11 @@
-import { PageContainer, Header, Title, Subtitle, ContentSection, IconTitle, Paragraph, List, Quote } from './styles'
+import { PageContainer, Container, Header, Title, Subtitle, ContentSection, IconTitle, Paragraph, List, Quote } from './styles'
 import { MdAirplanemodeActive, MdAddCard, MdHighlightOff, MdTrendingUp } from 'react-icons/md'
+import Navbar from '../../components/Navbar'
 
 export function Miles() {
   return (
+    <Container>
+    <Navbar />
     <PageContainer>
       <Header>
         <Title>Mastering Airline Miles</Title>
@@ -63,5 +66,6 @@ export function Miles() {
         ✈️ Turn your daily coffee, groceries, and bills into your next getaway — but only if you plan smart.
       </Quote>
     </PageContainer>
+    </Container>
   )
 }
