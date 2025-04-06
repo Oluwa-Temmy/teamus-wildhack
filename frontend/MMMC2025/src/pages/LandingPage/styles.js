@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-
+  font-size: 18px;
 `;
 
 export const CallToAction = styled.div`
   display: flex;
+  position: relative;
+  height: calc(100vh - 78px);
 
   div {
     display: flex;
@@ -13,7 +15,6 @@ export const CallToAction = styled.div`
     flex-direction: column;
     gap: 40px;
     margin: 0 50px;
-    height: calc(100vh - 78px);
   }
 
   p {
@@ -24,6 +25,25 @@ export const CallToAction = styled.div`
     width: 40%;
     height: auto;
     margin-right: 40px;
+  }
+`;
+
+export const ArrowDown = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  animation: bounce 1.2s infinite;
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(10px);
+    }
   }
 `;
 
@@ -99,3 +119,69 @@ export const GoldenButton = styled.button`
     scale: 1.1;
   }
 `;
+
+export const Section = styled.section`
+  padding: 4rem 2rem;
+  background-color: ${({ light, dark }) =>
+    light ? '#f9f9f9' : dark ? '#1e293b' : '#fff'};
+  text-align: center;
+`
+
+export const SectionTitle = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+`
+
+export const SectionSubtext = styled.p`
+  max-width: 600px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  font-size: 20px;
+`
+
+export const CardsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+`
+
+export const Card = styled.div`
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  text-align: left;
+  color: black;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  strong {
+    font-size: 2rem;
+    background-color: ${({ theme }) => theme.COLORS.GOLD};
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+
+  h4 {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #4b5563;
+  }
+`
