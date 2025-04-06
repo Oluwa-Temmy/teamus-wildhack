@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProtectedRoute from './hooks/auth'
 import { Dashboard } from './pages/Dashboard'
 import { LandingPage } from './pages/LandingPage'
-import { Questionnaire } from './pages/Questionnaire'
+import { Match } from './pages/Match'
+import { Profile } from './pages/Profile'
 
 export default function App() {
   return (
@@ -17,7 +18,22 @@ export default function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/questionnaire" element={<Questionnaire />}/>
+        <Route
+          path="/match"
+          element={
+            <ProtectedRoute>
+              <Match />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   )
