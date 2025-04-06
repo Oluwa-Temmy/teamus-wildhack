@@ -1,5 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import { Container, Navbar, NavItem, Logo, Aside, QuizBtn } from './style' 
+import { Container, Navbar, NavItem, Logo, Aside, QuizBtn, Loader } from './style' 
 import LogoBlack from '../../assets/logo-black.png'
 import { MdDashboard } from "react-icons/md";
 import { FaRegCreditCard } from "react-icons/fa";
@@ -14,7 +14,7 @@ import { MdOutlineAdsClick } from "react-icons/md";
 export function Dashboard(){
   const { loginWithRedirect, logout, user, isAuthenticated, isLoading } = useAuth0()
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <Loader />
 
   return (
     !isAuthenticated ? (
