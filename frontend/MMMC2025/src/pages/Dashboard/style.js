@@ -55,7 +55,7 @@ export const Aside = styled.div`
   }
 `;
 
-export const QuizBtn = styled.button`
+export const MatchBtn = styled.button`
   background-color: ${({ theme }) => theme.COLORS.GOLD};
   color: black;
   text-transform: uppercase;
@@ -78,14 +78,25 @@ export const QuizBtn = styled.button`
   }
 `;
 
+export const LoaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
 export const Loader = styled.div`
-  align-self: center;
-  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60px;
   aspect-ratio: 1;
   border-radius: 50%;
   animation: l11 2s infinite;
-
+  margin: auto;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  
   @keyframes l11 {
     0%   {background: conic-gradient(#fff 0     ,#0000 0)}
     12.5%{background: conic-gradient(#fff 45deg ,#0000 46deg)}
@@ -98,4 +109,3 @@ export const Loader = styled.div`
     100% {background: conic-gradient(#fff 360deg,#0000 360deg)}
   }
 `;
-

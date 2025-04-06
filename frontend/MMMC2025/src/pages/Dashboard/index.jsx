@@ -1,5 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import { Container, Navbar, NavItem, Logo, Aside, QuizBtn, Loader } from './style' 
+import { Container, Navbar, NavItem, Logo, Aside, MatchBtn, Loader, LoaderContainer } from './style' 
 import LogoBlack from '../../assets/logo-black.png'
 import { MdDashboard } from "react-icons/md";
 import { FaRegCreditCard } from "react-icons/fa";
@@ -8,13 +8,20 @@ import { FaPlane } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineAdsClick } from "react-icons/md";
-
-
+import { useNavigate } from 'react-router-dom'
 
 export function Dashboard(){
   const { loginWithRedirect, logout, user, isAuthenticated, isLoading } = useAuth0()
 
-  if (isLoading) return <Loader />
+  if (isLoading) {
+    return (
+      <LoaderContainer>
+        <Loader />
+      </LoaderContainer>
+    )
+  } 
+
+  const navigate = useNavigate()
 
   return (
     !isAuthenticated ? (
@@ -54,10 +61,11 @@ export function Dashboard(){
         <Aside>
           <h2>Welcome, {user.name}</h2>
           <p>Make a better choice today and own your financial journey.</p>
-          <QuizBtn>
+
+          <MatchBtn onClick={() => navigate('/match')}>
             Find your perfect match
             <MdOutlineAdsClick />
-          </QuizBtn>
+          </MatchBtn>
         </Aside>
       </Container>
     )
