@@ -15,7 +15,8 @@ export const Aside = styled.main`
   overflow-y: auto;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column;   
+  justify-content: center;  
   gap: 20px;
 
   p {
