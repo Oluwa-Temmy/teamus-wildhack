@@ -30,7 +30,7 @@ export function Dashboard(){
       <Container>
         <Navbar>
           <Logo src={LogoBlack} alt="Logo" />
-          <NavItem>
+          <NavItem onClick={() => navigate('/dashboard')}>
             <MdDashboard />
             Dashboard
           </NavItem>
@@ -47,7 +47,7 @@ export function Dashboard(){
             Miles
           </NavItem>
           <div style={{ marginTop: 'auto', width: '100%' }}>
-            <NavItem onClick={() => loginWithRedirect()}>
+            <NavItem onClick={() => navigate('/profile')}>
               <CgProfile />
               Profile
             </NavItem>

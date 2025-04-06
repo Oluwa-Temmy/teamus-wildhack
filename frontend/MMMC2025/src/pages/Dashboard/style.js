@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-
 export const Container = styled.div`
   display: flex;
   width: 100%;
@@ -34,6 +33,11 @@ export const NavItem = styled.button`
   &:hover {
     background-color: #fef8f2;
     scale: 1.05;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
   }
 `;
 
@@ -96,7 +100,7 @@ export const Loader = styled.div`
   margin: auto;
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
-  
+
   @keyframes l11 {
     0%   {background: conic-gradient(#fff 0     ,#0000 0)}
     12.5%{background: conic-gradient(#fff 45deg ,#0000 46deg)}

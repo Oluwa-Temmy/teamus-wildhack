@@ -3,6 +3,7 @@ import ProtectedRoute from './hooks/auth'
 import { Dashboard } from './pages/Dashboard'
 import { LandingPage } from './pages/LandingPage'
 import { Match } from './pages/Match'
+import { Profile } from './pages/Profile'
 
 export default function App() {
   return (
@@ -22,6 +23,14 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Match />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
             </ProtectedRoute>
           }
         />
